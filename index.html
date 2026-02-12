@@ -3,51 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms!</title>
+    <title>Flexbox and Forms!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
+      <h1>Header!</h1>
       <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">about</a></li>
-          <li><a href="form-link.html">goto</a></li>
+        <ul id="navBar">
+          <p>Navbar links for screenreader/accessibility</p>
+          <li><a href="index.html">flex links</a></li>
+          <li><a href="index.html">placeholder</a></li>
+          <li><a href="index.html">padding to avoid the right side</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
-        <h2>Form Section</h2>
-        <form action="" id="form">
-          <div class="inputWrapper">
-            <label>
-              Password
-              <input required hidden type="text" name="name" id="nameInput" />
-            </label>
+      <section id="heroSection">
+        <div class="flexContainer" id="smallerDiv">
+          <h2>I am smaller and taller!</h2>
+          <p>My ID adds extra styling onto the class.</p>
+          <p>Used for smaller menus, etc.</p>
+        </div>
+        <div class="flexContainer">
+          <h2>These blue sections are containers in a flexbox</h2>
+          <p>They move around the screen as you resize it, respecting CSS.</p>
+          <p>
+            This one is set to maxWidth 600, so more than the one on the left,
+            if there is room.
+          </p>
+          <p>
+            All three of these boxes move to column instead of row when the
+            screen is smaller.
+          </p>
+        </div>
 
-            <label>
-              Email
-              <input required type="email" name="email" id="emailInput" />
-            </label>
+        <div class="flexContainer">
+          <h2>Form Section</h2>
+          <form action="" id="form">
+            <div class="inputWrapper">
+              <label>
+                Password
+                <input
+                  required
+                  type="password"
+                  name="password"
+                  id="nameInput"
+                />
+              </label>
 
-            <label>
-              Select one
-              <textarea
-                name="textArea"
-                id="textArea"
-                placeholder="Enter an optional message"
-              ></textarea>
-            </label>
-          </div>
+              <label>
+                Email
+                <input required type="email" name="email" id="emailInput" />
+              </label>
 
-          <div class="buttonWrapper">
-            <button id="submitButton">Submit</button>
-          </div>
-        </form>
+              <label>
+                Select one
+                <textarea
+                  name="textArea"
+                  id="textArea"
+                  placeholder="Enter an optional message"
+                ></textarea>
+              </label>
+            </div>
+
+            <div class="buttonWrapper">
+              <button id="submitButton">Submit</button>
+            </div>
+          </form>
+        </div>
       </section>
-
-      <section></section>
     </main>
     <footer></footer>
   </body>
