@@ -5,6 +5,7 @@
 
 * {
   text-decoration: none;
+  margin: 0px;
 }
 
 .form {
@@ -23,8 +24,10 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  gap: 1rem;
 }
 .flexContainer {
+  gap: 0.5rem;
   display: flex;
   flex-flow: column;
   max-width: 400px;
@@ -51,6 +54,7 @@ h2 {
   border: 6px black solid;
   border-radius: 6px;
   background-color: #fff;
+  margin-top: 40px;
 }
 
 .block {
@@ -77,6 +81,8 @@ h2 {
     align-items: center;
     justify-content: space-between;
     gap: 0.6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   #heroSection {
     display: flex;
@@ -95,7 +101,7 @@ h2 {
 @media (width > 650px) {
   .flexContainer {
     background-color: var(--big-color);
-    max-width: 600px;
+    max-width: 400px;
   }
   #navBar {
     background-color: #bbb;
@@ -106,12 +112,15 @@ h2 {
     gap: 0.6rem;
     padding-right: 6px;
     justify-content: end;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   #heroSection {
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
     gap: 20px;
+    justify-content: space-around;
+    align-items: center;
   }
 
   #smallerDiv {
