@@ -69,6 +69,24 @@ h2 {
   background-color: #333;
 }
 
+#resizableForm {
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+}
+
+.resizableInputWrapper {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 8px;
+}
+
+.resizableButtonWrapper {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 8px;
+}
+
 @media (width <= 650px) {
   .flexContainer {
     background-color: var(--small-color);
@@ -95,6 +113,10 @@ h2 {
   }
   #colorH2::after {
     content: "aqua.";
+  }
+  #resizableForm {
+    flex-flow: column;
+    width: 400px;
   }
 }
 

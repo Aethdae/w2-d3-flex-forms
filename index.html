@@ -101,7 +101,45 @@
         </div>
       </section>
 
-      <section id="form-resize"></section>
+      <section id="formResizeSection">
+        <form action="" id="resizableForm">
+          <div class="resizableInputWrapper">
+            <label>
+              Email
+              <input
+                required
+                placeholder="Email"
+                type="email"
+                name="email"
+                id="emailInput"
+              />
+            </label>
+
+            <label>
+              Password
+              <input
+                required
+                placeholder="Password"
+                type="password"
+                name="password"
+                id="nameInput"
+              />
+            </label>
+          </div>
+
+          <div class="resizableButtonWrapper">
+            <label>
+              Send a message!
+              <textarea
+                name="optional"
+                id="optional"
+                placeholder="Enter an optional message"
+              ></textarea>
+            </label>
+            <button id="submitButton">Submit</button>
+          </div>
+        </form>
+      </section>
     </main>
     <footer></footer>
   </body>
