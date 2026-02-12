@@ -1,3 +1,8 @@
+:root {
+  --big-color: lightblue;
+  --small-color: aqua;
+}
+
 .form {
   display: flex;
   flex-flow: column;
@@ -7,43 +12,46 @@
 .buttonWrapper {
   display: flex;
   flex-flow: column;
-  align-content: center;
+  align-items: center;
 }
 
 .inputWrapper {
   display: flex;
   flex-flow: column;
-  align-content: center;
+  align-items: center;
 }
 .flexContainer {
+  display: flex;
+  flex-flow: column;
   max-width: 400px;
-  background-color: lightblue;
   border: black 2px solid;
   border-radius: 8px;
   padding: 6px;
+  height: fit-content;
+  align-items: center;
 }
 
-#smallerDiv {
-  max-width: 200px;
-  height: 400px;
+.flexContainer p {
+  text-align: center;
 }
 
 h2 {
   word-wrap: break-word;
 }
 
-#navBar {
-  background-color: #bbb;
-  list-style: none;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  gap: 0.6rem;
-  padding-right: 6px;
-  justify-content: end;
-}
-
-@media (width <= 512px) {
+@media (width <= 650px) {
+  .flexContainer {
+    background-color: var(--small-color);
+  }
+  #navBar {
+    background-color: #bbb;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
   #heroSection {
     display: flex;
     flex-flow: column;
@@ -53,16 +61,42 @@ h2 {
     background-color: #000;
     color: white;
   }
+  #colorH2::after {
+    content: "aqua.";
+  }
 }
 
-@media (width > 512px) {
+@media (width > 650px) {
+  .flexContainer {
+    background-color: var(--big-color);
+    max-width: 600px;
+  }
+  #navBar {
+    background-color: #bbb;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.6rem;
+    padding-right: 6px;
+    justify-content: end;
+  }
   #heroSection {
     display: flex;
     flex-flow: row;
+    justify-content: space-around;
     gap: 20px;
+  }
+
+  #smallerDiv {
+    max-width: 200px;
+    height: 400px;
   }
   h2 {
     background-color: #fff;
     color: #000;
+  }
+  #colorH2::after {
+    content: "light blue.";
   }
 }

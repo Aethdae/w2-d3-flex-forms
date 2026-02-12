@@ -13,7 +13,7 @@
         <ul id="navBar">
           <p>Navbar links for screenreader/accessibility</p>
           <li><a href="index.html">flex links</a></li>
-          <li><a href="index.html">placeholder</a></li>
+          <li><a href="index.html">a = inline</a></li>
           <li><a href="index.html">padding to avoid the right side</a></li>
         </ul>
       </nav>
@@ -24,9 +24,12 @@
           <h2>I am smaller and taller!</h2>
           <p>My ID adds extra styling onto the class.</p>
           <p>Used for smaller menus, etc.</p>
+          <p>The extra size goes away when smaller screen.</p>
         </div>
         <div class="flexContainer">
-          <h2>These blue sections are containers in a flexbox</h2>
+          <h2 id="colorH2">
+            These sections are containers in a flexbox, colored:
+          </h2>
           <p>They move around the screen as you resize it, respecting CSS.</p>
           <p>
             This one is set to maxWidth 600, so more than the one on the left,
@@ -36,6 +39,7 @@
             All three of these boxes move to column instead of row when the
             screen is smaller.
           </p>
+          <p>Using fit-content + padding to allow for very tight blocks.</p>
         </div>
 
         <div class="flexContainer">
@@ -43,9 +47,21 @@
           <form action="" id="form">
             <div class="inputWrapper">
               <label>
+                Email
+                <input
+                  required
+                  placeholder="Email"
+                  type="email"
+                  name="email"
+                  id="emailInput"
+                />
+              </label>
+
+              <label>
                 Password
                 <input
                   required
+                  placeholder="Password"
                   type="password"
                   name="password"
                   id="nameInput"
@@ -53,15 +69,10 @@
               </label>
 
               <label>
-                Email
-                <input required type="email" name="email" id="emailInput" />
-              </label>
-
-              <label>
                 Select one
                 <textarea
-                  name="textArea"
-                  id="textArea"
+                  name="optional"
+                  id="optional"
                   placeholder="Enter an optional message"
                 ></textarea>
               </label>
