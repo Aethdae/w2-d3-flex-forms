@@ -4,5 +4,14 @@
   align-content: center;
 }
 
-.button {
+.buttonWrapper {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
 }
